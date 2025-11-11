@@ -1,0 +1,20 @@
+{
+  "name": "ML101 (Python + Jupyter)",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "postCreateCommand": "pip install -U pip && if [ -f requirements.txt ]; then pip install -r requirements.txt; else pip install ipykernel jupyter numpy pandas matplotlib scikit-learn; fi && python -m ipykernel install --user --name ml101 --display-name 'Python (ml101)'",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "ms-python.vscode-pylance"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "jupyter.notebookFileRoot": "${workspaceFolder}"
+      }
+    }
+  },
+  "remoteUser": "vscode",
+  "runArgs": ["--ipc=host"]
+}

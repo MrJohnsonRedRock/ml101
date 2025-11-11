@@ -1,11 +1,48 @@
+# Python cache & artifacts
 __pycache__/
 *.py[cod]
+*.pyo
+*.pyd
+*.so
 *.egg-info/
+*.egg
+*.manifest
+*.spec
+
+# Virtual environments
 .venv/
-.env
+.env/
+env/
+venv/
 
 # Jupyter
 .ipynb_checkpoints/
+# Avoid large auto-save notebook backups
+*.nbconvert.ipynb
 
 # VS Code
 .vscode/
+.history/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Devcontainers / Docker
+.devcontainer/.env
+.devcontainer/.cache/
+docker-compose.override.yml
+**/.devcontainer/Dockerfile.local
+*.log
+
+# Data / temporary exports
+data/
+tmp/
+outputs/
+__output__/
+*.csv~
+*.tmp
+*.bak
+*.swp
+# Windows alternate data streams
+*Zone.Identifier
