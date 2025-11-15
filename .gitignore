@@ -41,6 +41,7 @@ tmp/
 outputs/
 __output__/
 *.csv~
+*.csv
 *.tmp
 *.bak
 *.swp
